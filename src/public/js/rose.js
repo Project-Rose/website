@@ -1,3 +1,4 @@
+/* eslint-disable */
 $(document).ready(function () {
     $(".confirm-twttr").on("click", function(evt) {
         evt.preventDefault();
@@ -8,7 +9,7 @@ $(document).ready(function () {
         }
 
         window.location.href="/tvii/checkForTWRedirect?code=" + code;
-    })
+    });
 
     $(".confirm-tumblr").on("click", function(evt) {
         evt.preventDefault();
@@ -19,5 +20,5 @@ $(document).ready(function () {
         }
 
         window.location.href="/tvii/checkForTBRedirect?code=" + code;
-    })
+    });
 });

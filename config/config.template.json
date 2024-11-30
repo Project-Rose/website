@@ -1,12 +1,12 @@
 {
-  "http": {
-    "port": 80
-  },
-  "api": {
-    "twttr_consumer_key" : "",
-    "twttr_consumer_secret" : "",
-    "tumblr_consumer_key" : "",
-    "tumblr_consumer_secret" : "",
-    "website_url" : "https://projectrose.cafe"
-  }
+    "http": {
+        "port": 80
+    },
+    "api": {
+        "twttr_consumer_key" : "",
+        "twttr_consumer_secret" : "",
+        "tumblr_consumer_key" : "",
+        "tumblr_consumer_secret" : "",
+        "website_url" : "https://projectrose.cafe"
+    }
 }
