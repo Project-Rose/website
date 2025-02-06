@@ -1,0 +1,27 @@
+{
+    "name": "rose-site",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "devDependencies": {
+        "prettier": "^3.4.2",
+        "prettier-plugin-astro": "^0.14.1"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^4.0.8",
+        "@astrojs/vercel": "^8.0.2",
+        "@libsql/client": "^0.14.0",
+        "@vercel/analytics": "^1.4.1",
+        "@vercel/speed-insights": "^1.1.0",
+        "astro": "^5.1.8",
+        "astro-font": "^1.0.0",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.5.1",
+        "sass": "^1.83.4"
+    }
+}

@@ -1,0 +1,215 @@
+services:
+    # The Node instance for the Whitelist
+    rose-whitelist:
+        build:
+            context: repos/whitelist/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-whitelist
+        working_dir: /app
+        volumes:
+            - ./repos/whitelist/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Node instance for the Project Rosé website
+    rose-website:
+        image: node:23-slim
+        container_name: rose-website
+        working_dir: /app
+        volumes:
+            - ./repos/prod/website/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Deno instance for the Project Rosé Clefairy Discord Bot
+    rose-clefairy-bot:
+        image: denoland/deno:2.0.0
+        container_name: Clefairy
+        working_dir: /app
+        volumes:
+            - ./repos/prod/Clefairy/:/app/
+        entrypoint: ["deno", "run", "production"]
+
+    # The Node instance for TVii Development (d1)
+    rose-tvii-dev:
+        build:
+            context: repos/dev/tvii/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-tvii-dev
+        working_dir: /app
+        volumes:
+            - ./repos/dev/tvii/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Node instance for TVii ACR Development (d1)
+    rose-tvii-acr-dev:
+        build:
+            context: repos/dev/tvii-acr/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-tvii-acr-dev
+        working_dir: /app
+        volumes:
+            - ./repos/dev/tvii-acr/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Node instance for TVii Production (l1)
+    rose-tvii:
+        build:
+            context: repos/prod/tvii/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-tvii
+        working_dir: /app
+        volumes:
+            - ./repos/prod/tvii/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Node instance for TVii ACR Production (l1)
+    rose-tvii-acr:
+        build:
+            context: repos/prod/tvii-acr/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-tvii-acr
+        working_dir: /app
+        volumes:
+            - ./repos/prod/tvii-acr/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Node instance for TVii Staging (stg1/stg.l1)
+    rose-tvii-stg:
+        build:
+            context: repos/stg/tvii/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-tvii-stg
+        working_dir: /app
+        volumes:
+            - ./repos/stg/tvii/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # The Node instance for TVii ACR Staging (stg1/stg.l1)
+    rose-tvii-acr-stg:
+        build:
+            context: repos/stg/tvii-acr/
+            dockerfile: Dockerfile
+        image: node:23-slim
+        container_name: rose-tvii-acr-stg
+        working_dir: /app
+        volumes:
+            - ./repos/stg/tvii-acr/:/app/
+        entrypoint: ["npm", "run", "start"]
+        ports:
+            - "80"
+
+    # Nginx (Reverse Proxy)
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        depends_on:
+            - rose-website
+            - rose-tvii
+            - rose-tvii-acr
+            - rose-tvii-stg
+            - rose-tvii-acr-stg
+            - rose-tvii-dev
+            - rose-tvii-acr-dev
+            - rose-whitelist
+            - db
+            - adminer
+        volumes:
+            - ./config/nginx.conf:/etc/nginx/nginx.conf
+            - ./certs/:/opt/certs/
+            - ./config/:/opt/config/
+        ports:
+            - "80:80"
+            - "443:443"
+            - "8443:8443"
+
+    # Database (Postgres)
+    db:
+        image: postgres:latest
+        container_name: my-postgres
+        restart: always
+        environment:
+            POSTGRES_USER: projectrose
+            POSTGRES_PASSWORD: projectrose
+            POSTGRES_ROOT_PASSWORD: projectrose # Not what we actually use in prod
+        volumes:
+            #     - "./mariadb-data:/var/lib/mysql"
+            - "./postgres-data:/var/lib/mysql"
+        ports:
+            #- "3306:3306"
+            - "5432:5432"
+
+    # phpMyAdmin (Database Viewer and Manager)
+    #  phpmyadmin:
+    #   image: elestio/pgadmin:latest
+    #   restart: always
+    #  ports:
+    #    - "80"
+    #  environment:
+    #     - PMA_ARBITRARY=1
+    #   PGADMIN_DEFAULT_EMAIL: itzswirlz2020@outlook.com
+    #   PGADMIN_DEFUALT_PASSWORD: projectrose
+
+    adminer:
+        image: adminer:latest
+        container_name: rose-adminer
+        restart: always
+        ports:
+            - "80"
+            - "8080"
+    umami:
+        image: ghcr.io/umami-software/umami:postgresql-latest
+        ports:
+            - "3000:3000"
+        environment:
+            DATABASE_URL: postgresql://umami:umami@db:5432/umami
+            DATABASE_TYPE: postgresql
+            APP_SECRET: replace-me-with-a-random-string
+        depends_on:
+            umami-db:
+                condition: service_healthy
+        init: true
+        restart: always
+        healthcheck:
+            test: ["CMD-SHELL", "curl http://localhost:3000/api/heartbeat"]
+            interval: 5s
+            timeout: 5s
+            retries: 5
+    umami-db:
+        image: postgres:15-alpine
+        environment:
+            POSTGRES_DB: umami
+            POSTGRES_USER: umami
+            POSTGRES_PASSWORD: umami
+        volumes:
+            - umami-db-data:/var/lib/postgresql/data
+        restart: always
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}",
+                ]
+            interval: 5s
+            timeout: 5s
+            retries: 5
+volumes:
+    umami-db-data:

@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    name: string;
+    image: string;
+    color: string;
+    description: string;
+    href: string;
+    className?: string;
+}
+
+const { name, image, color, description, href, className }: Props = Astro.props;
+---
+
+<a
+    class={`dev-card ${className}`}
+    style={`--card-color: ${color};`}
+    href={href}
+    target="_blank"
+>
+    <div class="shine">
+        <Image
+            src={image}
+            alt={`${name}'s Mii`}
+            width={150}
+            height={150}
+            draggable={false}
+            class="profile-image"
+            sizes="(max-width: 768px) 100vw, 600px"
+        />
+    </div>
+    <div class="info">
+        <span class="name">
+            {name}
+            <slot name="svg" />
+        </span>
+        <p class="description">{description}</p>
+    </div>
+</a>
+
+<style lang="scss">
+    .dev-card {
+        position: relative;
+        display: block;
+        margin: 20px auto;
+        min-height: 180px;
+        width: 100%;
+        max-width: 450px;
+        border-radius: 15px;
+        padding: 5px;
+        text-align: left;
+        text-decoration: none;
+        background-image: url("/img/tex/cardboardTex.png");
+        background-color: var(--card-color);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.44);
+        color: #000;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        .shine {
+            position: relative;
+            float: left;
+            margin: 16px;
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            background: #dedede;
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.4);
+            background-image: url("/img/tex/miiShine.png");
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                width: 150px;
+                height: 150px;
+                border-radius: 20px;
+                background: no-repeat;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 20px;
+            }
+        }
+
+        .info {
+            margin-left: 170px;
+
+            .name {
+                display: block;
+                margin-top: 10px;
+                font-size: 26px;
+                color: #323232;
+            }
+
+            .description {
+                display: block;
+                margin-top: 4px;
+                font-size: 18px;
+                color: white;
+            }
+        }
+    }
+</style>

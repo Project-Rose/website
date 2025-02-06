@@ -1,0 +1,80 @@
+---
+interface Props {
+    href: string;
+    newTab?: boolean;
+}
+
+const { href, newTab = false }: Props = Astro.props;
+const rel = newTab ? "noopener noreferrer" : undefined;
+---
+
+<a
+    href={href}
+    target={newTab ? "_blank" : "_self"}
+    rel={rel}
+    class="wii-u-button"
+    role="button"
+>
+    <span class="button-text"><slot /></span>
+</a>
+
+<style lang="scss">
+    .wii-u-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #ffffff 50%,
+            #f7f7f7 80%,
+            #e2e2e2 95%,
+            #e9e9e9 96%,
+            #ffffff 100%
+        );
+        border-radius: clamp(12px, 2vw, 16px);
+        text-shadow: 0 1px 0 #fff;
+        box-shadow:
+            inset 0 2px 0 -1px #e9e9e9,
+            inset 0 0 0 2px #fff,
+            0 2px 8px rgba(0, 0, 0, 0.2);
+        height: clamp(48px, 8vw, 64px);
+        font-size: clamp(18px, 3vw, 24px);
+        font-weight: 600;
+        color: #323232;
+        width: 100%;
+        max-width: 560px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        margin: 0;
+        padding: 0 clamp(1rem, 4vw, 2rem);
+        min-height: 64px;
+
+        &:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow:
+                inset 0 2px 0 -1px #e9e9e9,
+                inset 0 0 0 2px #fff,
+                0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        &:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            margin: 0 0.5rem;
+        }
+    }
+
+    .button-text {
+        position: relative;
+    }
+</style>

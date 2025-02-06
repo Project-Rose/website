@@ -1,0 +1,98 @@
+---
+import WiiUButton from "@/components/WiiUButton.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+    title="Not Found - Project Rosé"
+    description="Project Rosé is a group of developers reviving web apps for the Wii U! Unfortunately, we couldn't find what you're looking for!"
+>
+    <main id="main-content" role="main">
+        <div class="header" role="banner">
+            <Image
+                src={"/img/logo.webp"}
+                alt="Project Rosé - Wii U Web App Revival Project"
+                width={920}
+                height={160}
+                class="rose-logo"
+                loading="eager"
+            />
+        </div>
+        <section class="error-section">
+            <h2>We couldn&apos;t find what you&apos;re looking for!</h2>
+            <span class="error"></span>
+            <div class="button">
+                <WiiUButton href="/">Go back home</WiiUButton>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style lang="scss">
+    @keyframes fadeUpIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+
+        .rose-logo {
+            width: 500px;
+            height: 82.5px;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+            animation: fadeUpIn 0.5s ease-out forwards;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+            }
+
+            @media (max-width: 480px) {
+                max-width: 280px;
+            }
+        }
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 -1rem;
+        padding: 0 1rem;
+
+        @media (max-width: 768px) {
+            gap: 1rem;
+        }
+    }
+
+    span.error {
+        mask-image: url("/img/mask/error.png");
+        mask-size: 140px;
+        mask-repeat: no-repeat;
+        height: 140px;
+        width: 140px;
+        background: #ff253e;
+        display: inline-block;
+        margin: 1rem 0 2rem;
+        align-self: flex-start;
+    }
+</style>

@@ -1,0 +1,171 @@
+---
+import Analytics from "@/components/Analytics.astro";
+import { AstroFont } from "astro-font";
+
+interface Props {
+    title: string;
+    description: string;
+    ogImage?: string;
+}
+
+const {
+    title,
+    description,
+    ogImage = "/img/og/og_default.webp",
+}: Props = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="theme-color" content="#ff8ae8" />
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="Project, Project Rosé, Project Rosè, Project Rose, Gaming, Nintendo, WiiU, Wii U, 3DS, 2DS, DS, Wii, 8th generation, Home console, Gamepad, Game pad, Nintendo TVii, TVii, Demae-Can, Food Channel, Miiverse, Revival, Fan Project, TV Tag, tvtag, Rosé, Rosè, Rose, NWF, Nintendo Web Framework, Developers, JP TVii, US TVii, TheMovieDB, TiVo, TiVo API, Zap2It API, Zap2It, TV Guide, TV Guide API, Live TV, Streaming, Hulu, Sling"
+        />
+        <meta name="author" content="Project Rosé" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="copyright" content="Project Rosé, 2025" />
+        <meta name="rating" content="General" />
+        <meta name="language" content="en-US" />
+        <meta name="distribution" content="global" />
+        <meta name="viewport-fit" content="cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="Project Rosé" />
+        <meta name="msapplication-tooltip" content="Project Rosé" />
+        <meta name="msapplication-starturl" content="/" />
+        <meta name="msapplication-TileColor" content="#ff8ae8" />
+
+        <!-- Open Graph -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Project Rosé" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={description} />
+
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="/favicons/favicon-96x96.png"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+        <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicons/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="canonical" href="https://projectrose.cafe/" />
+        <meta name="google-adsense-account" content="ca-pub-2403116901606490" />
+
+        <AstroFont
+            config={[
+                {
+                    src: [],
+                    name: "Roboto",
+                    googleFontsURL:
+                        "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
+                    preload: true,
+                    display: "swap",
+                    selector: "body",
+                    fallback: "sans-serif",
+                },
+            ]}
+        />
+
+        <!-- Analytics and AdSense  -->
+        <Analytics />
+    </head>
+    <body>
+        <div class="container" role="document">
+            <slot />
+        </div>
+    </body>
+</html>
+
+<style lang="scss" is:global>
+    :root {
+        --primary: #ff8ae8;
+        --primary-dark: #e066c6;
+        --primary-light: #fdb2f1;
+        --text: #1a1a1a;
+        --text-light: #4a4a4a;
+        --background: #fafafa;
+        --card-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        --transition: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    $container-width: 1200px;
+    $primary-color: #ff8ae8;
+
+    ::selection {
+        background-color: var(--primary-light);
+        color: #fff;
+    }
+
+    body {
+        font-weight: 500;
+        background: url("/img/bg/bg.webp") repeat;
+        background-size: 823px 392px;
+        animation: 60s bgScroll linear infinite;
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @keyframes bgScroll {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: -823px -392px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        body {
+            animation: none;
+        }
+    }
+
+    .mt-1 {
+        margin-top: 1rem;
+    }
+</style>
