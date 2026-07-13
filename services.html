@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fd3171" />
+
+    <title>Services - Project Rosé</title>
+    <meta
+      name="description"
+      content="Explore the services offered by Project Rosé."
+    />
+    <meta name="author" content="Project Rosé" />
+    <meta name="viewport-fit" content="cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Services - Project Rosé" />
+    <meta
+      property="og:description"
+      content="Explore the services offered by Project Rosé."
+    />
+    <meta property="og:image" content="/img/og/og_default.webp" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:url" content="https://projectrose.cafe/services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Project Rosé" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Services - Project Rosé" />
+    <meta
+      name="twitter:description"
+      content="Explore the services offered by Project Rosé."
+    />
+    <meta name="twitter:image" content="/img/og/og_default.webp" />
+    <meta name="twitter:image:alt" content="Explore the services offered by Project Rosé." />
+
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://projectrose.cafe/services" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script>
+      (function () {
+        const theme = localStorage.getItem("rose-theme");
+        if (
+          theme === "dark" ||
+          (!theme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="page-services">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Home">
+          <img src="./img/logo.webp" alt="Project Rosé" width="200" height="35" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="https://discord.gg/AaTsXndGun" target="_blank" rel="noopener noreferrer">Discord</a>
+          </li>
+          <li>
+            <a href="https://projectrose.montastic.io/" target="_blank" rel="noopener noreferrer">Status</a>
+          </li>
+        </ul>
+        <button class="theme-toggle" aria-label="Switch to dark mode">
+          <svg class="theme-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <main id="main-content">
+        <section class="services-header">
+          <img
+            src="/img/logo.webp"
+            alt="Project Rosé"
+            width="400"
+            height="69.5"
+            class="rose-logo"
+          />
+          <h1>Our Services</h1>
+          <p class="page-subtitle">
+            Browse and install Project Rosé's services for Wii U, Nintendo 3DS
+            and the web!
+          </p>
+        </section>
+
+        <section class="services-grid" aria-label="Available services">
+          <article class="service-card">
+            <div class="card-screenshot">
+              <img
+                src="./img/bg/miiverse-offdevice.png"
+                alt="Roséverse screenshot"
+                class="screenshot-img"
+              />
+            </div>
+            <div class="card-content">
+              <div class="service-icon">
+                <img src="./img/logos/miiverse-logo.webp" alt="Roséverse logo" />
+              </div>
+              <h2>Roséverse</h2>
+              <p class="service-desc">
+                The main Miiverse revival experience for Wii U
+                and off-device. Share messages, drawings, and screenshots just
+                like the original Miiverse.
+              </p>
+              <div class="service-links">
+                <a
+                  href="https://miiverse.projectrose.cafe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="wii-u-button"
+                  role="button"
+                >
+                  <span class="button-text">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Roséverse
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="card-screenshot">
+              <img
+                src="./img/bg/tvii-jp.webp"
+                alt="Nintendo TVii screenshot"
+                class="screenshot-img"
+              />
+            </div>
+            <div class="card-content">
+              <div class="service-icon">
+                <img src="./img/logos/tvii-logo.png" alt="Nintendo TVii logo" style="border-radius:8px" />
+              </div>
+              <h2>Nintendo TVii</h2>
+              <p class="service-desc">
+                The only Nintendo TVii revival. Discover another way of watching TV, interact
+                with shows, and post comments about your favorite shows and movies!
+              </p>
+              <div class="service-links">
+                <a href="https://github.com/Project-Rose/RosePatcher" target="_blank" rel="noopener noreferrer" class="wii-u-button" role="button">
+                  <span class="button-text">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Learn more
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <div class="back-home">
+          <a href="/" class="wii-u-button" role="button">
+            <span class="button-text">Go back home</span>
+          </a>
+        </div>
+      </main>
+    </div>
+
+      <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./img/logo.webp" alt="Project Rosé" width="220" height="38" />
+          <p class="footer-desc">
+            Project Rosé is a revival project for Nintendo TVii and Miiverse!
+            Soon-to-be open source!
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h3>Navigate</h3>
+            <a href="/">Home</a>
+            <a href="./services.html">Services</a>
+          </div>
+          <div class="footer-col">
+            <h3>Community</h3>
+            <a href="https://discord.gg/AaTsXndGun" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="https://github.com/project-rose/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://projectrose.montastic.io/" target="_blank" rel="noopener noreferrer">Status</a>
+            <a href="https://www.youtube.com/@projectrosecafe" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://x.com/projectrosecafe" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Project Rosé, 2026. All rights reserved.</p>
+        <p class="footer-notice">
+          Not affiliated with Nintendo. All trademarks belong to their
+          respective owners.
+        </p>
+        <p class="footer-credit">Website by Dorian!</p>
+      </div>
+    </footer>
+
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+# ==============================
+# Secrets & local credentials
+# ==============================
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.cer
+*.der
+*secret*
+*Secret*
+*SECRET*
+*credentials*
+*Credentials*
+*CREDENTIALS*
+*.local
+.vercel
+.netlify
+.aws/
+.ssh/
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.gpg
+*.asc
+token.json
+auth.json
+
+# ==============================
+# Node
+# ==============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.pnpm-store/
+
+# ==============================
+# macOS
+# ==============================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==============================
+# Windows
+# ==============================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ==============================
+# Editors / IDEs
+# ==============================
+.idea/
+*.swp
+*.swo
+*~
+
+# ==============================
+# Logs & temp files
+# ==============================
+*.log
+logs/
+tmp/
+temp/

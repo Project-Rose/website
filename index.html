@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fd3171" />
+
+    <title>Home - Project Rosé</title>
+    <meta
+      name="description"
+      content="Project Rosé is a revival project for Nintendo TVii and Miiverse! Soon-to-be open source!"
+    />
+    <meta name="author" content="Project Rosé" />
+    <meta name="viewport-fit" content="cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Home - Project Rosé" />
+    <meta
+      property="og:description"
+      content="Project Rosé is a revival project for Nintendo TVii and Miiverse! Soon-to-be open source!"
+    />
+    <meta property="og:image" content="/img/og/og_default.webp" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:url" content="https://projectrose.cafe" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Project Rosé" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Home - Project Rosé" />
+    <meta
+      name="twitter:description"
+      content="Project Rosé is a revival project for Nintendo TVii and Miiverse! Soon-to-be open source!"
+    />
+    <meta name="twitter:image" content="/img/og/og_default.webp" />
+    <meta
+      name="twitter:image:alt"
+      content="Project Rosé is a revival project for Nintendo TVii and Miiverse! Soon-to-be open source!"
+    />
+
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://projectrose.cafe" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script>
+      (function () {
+        const theme = localStorage.getItem("rose-theme");
+        if (
+          theme === "dark" ||
+          (!theme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="page-home">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Home">
+          <img src="/img/logo.webp" alt="Project Rosé" width="200" height="35" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/services.html">Services</a>
+          </li>
+          <li>
+            <a href="https://discord.gg/AaTsXndGun" target="_blank" rel="noopener noreferrer">Discord</a>
+          </li>
+          <li>
+            <a href="https://projectrose.montastic.io/" target="_blank" rel="noopener noreferrer">Status</a>
+          </li>
+        </ul>
+        <button class="theme-toggle" aria-label="Switch to dark mode">
+          <svg class="theme-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <main id="main-content">
+        <section class="hero">
+          <a href="/" class="hero-logo-link">
+            <img
+              src="/img/logo.webp"
+              alt="Project Rosé logo"
+              width="500"
+              height="82.5"
+              class="rose-logo"
+            />
+          </a>
+          <p class="hero-tagline">
+            Project Rosé is a revival project for Nintendo TVii and Miiverse!
+            Soon-to-be open source!
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://miiverse.projectrose.cafe/" target="_blank" rel="noopener noreferrer" class="wii-u-button" role="button">
+              <span class="button-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                Offdevice Services
+              </span>
+            </a>
+            <a href="https://discord.gg/AaTsXndGun" target="_blank" rel="noopener noreferrer" class="wii-u-button" role="button">
+              <span class="button-text">
+                <svg width="18" height="18" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+                Join our Discord
+              </span>
+            </a>
+            <a href="https://github.com/project-rose/" target="_blank" rel="noopener noreferrer" class="wii-u-button" role="button">
+              <span class="button-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"/></svg>
+                Check out our GitHub
+              </span>
+            </a>
+            <a href="/#support" class="wii-u-button" role="button">
+              <span class="button-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Support Us
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="projects" aria-label="Our Projects">
+          <div class="section-header">
+            <h2 class="section-title">What We're Rebuilding</h2>
+          </div>
+          <div class="projects-grid">
+            <div class="card-wrapper">
+              <div class="project-card" style="cursor: default">
+                <img
+                  src="/img/bg/tvii-jp.webp"
+                  alt="Nintendo TVii screenshot"
+                  width="576"
+                  height="324"
+                  class="card-image"
+                />
+                <div class="overlay">
+                  <div class="overlay-inner">
+                    <h2>Nintendo TVii (JP)</h2>
+                    <p class="card-description">
+                      Nintendo TVii was a Wii U applet that helped
+                      users discuss while watching TV and post to Miiverse. This version uses the Japanese TVii layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-wrapper">
+              <a
+                href="https://miiverse.projectrose.cafe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card"
+                aria-labelledby="card-title-miiverse"
+              >
+                <img
+                  src="/img/bg/miiverse-offdevice.png"
+                  alt="Miiverse screenshot"
+                  width="576"
+                  height="324"
+                  class="card-image"
+                />
+                <div class="overlay">
+                  <div class="overlay-inner">
+                    <h2 id="card-title-miiverse">Miiverse</h2>
+                    <p class="card-description">
+                      Miiverse was the social network of the Wii U and 3DS,
+                      letting players share messages, drawings, and screenshots.
+                    </p>
+                    <span class="learn-more" aria-hidden="true">Learn more →</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <p class="projects-more">With more planned!</p>
+        </section>
+
+        <section class="staff" aria-label="Our Team">
+          <div class="section-header">
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="section-subtitle">
+              Meet the people behind Project Rosé.
+            </p>
+          </div>
+          <!-- Profile cards -->
+          <div class="staff-grid">
+            <!-- Dorian -->
+            <div
+              class="staff-card"
+              style="--card-index: 0; --card-accent: #816cff"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/dorian.png"
+                  alt="Dorian's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  Dorian
+                  <img src="/img/flags/fr.png" alt="FR" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Owner / Sysadmin / Developer</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/d16_dorian"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+                <a
+                  href="https://github.com/dorian-osly"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn github-btn"
+                  title="View GitHub profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <!-- Ninuno -->
+            <div
+              class="staff-card"
+              style="--card-index: 1; --card-accent: #ff0000"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/ninuno.png"
+                  alt="Ninuno's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  Ninuno
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Sysadmin / Admin / Developer</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/ninuno"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+                <a
+                  href="https://github.com/ninuno"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn github-btn"
+                  title="View GitHub profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <!-- suprstarrd -->
+            <div
+              class="staff-card"
+              style="--card-index: 2; --card-accent: #41e46b"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/suprstarrd.png"
+                  alt="suprstarrd's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  suprstarrd
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Sysadmin / Roséverse Mod</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/suprstarrd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+                <a
+                  href="https://github.com/suprstarrd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn github-btn"
+                  title="View GitHub profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <!-- Braden -->
+            <div
+              class="staff-card"
+              style="--card-index: 3; --card-accent: #e91e63"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/braden.png"
+                  alt="Braden's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  Braden
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Discord / Roséverse Admin</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/ThatWeirdBassist"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+              </div>
+            </div>
+            <!-- CTRDash -->
+            <div
+              class="staff-card"
+              style="--card-index: 4; --card-accent: #00a5ff"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/ctrdash.png"
+                  alt="CTRDash's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  CTRDash
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Discord / Roséverse Admin</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/ctrdash"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+              </div>
+            </div>
+            <!-- Abby -->
+            <div
+              class="staff-card"
+              style="--card-index: 5; --card-accent: #f39c9d"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/abby.png"
+                  alt="Abby's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  Abby
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Discord / Roséverse Admin</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/smurfs2025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+              </div>
+            </div>
+            <!-- rmck01 -->
+            <div
+              class="staff-card"
+              style="--card-index: 6; --card-accent: #faa8cf"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/rmck01.png"
+                  alt="rmck01's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  rmck01
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">Discord / Roséverse Admin</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/rmck01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+                <a
+                  href="https://github.com/rmck01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn github-btn"
+                  title="View GitHub profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <!-- Virtualle -->
+            <div
+              class="staff-card"
+              style="--card-index: 7; --card-accent: #25bbb8"
+              tabindex="0"
+            >
+              <div class="card-avatar">
+                <img
+                  src="/img/miis/virtualle.png"
+                  alt="Virtualle's Mii"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-name">
+                  Virtualle
+                  <img src="/img/flags/us.png" alt="US" class="card-flag" width="18" height="18" />
+                </span>
+                <span class="card-role">3DS Developer</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://miiverse.projectrose.cafe/users/Cooleli912"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn miiverse-btn"
+                  title="View Roséverse profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg>
+                  Miiverse
+                </a>
+                <a
+                  href="https://github.com/VirtuallyExisting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-action-btn github-btn"
+                  title="View GitHub profile"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="support" id="support" aria-label="Support Us">
+          <div class="section-header">
+            <h2 class="section-title">Support Our Project</h2>
+            <p class="section-subtitle">
+              Running and maintaining our services comes with costs: servers,
+              domains, development, and infrastructure. Any donation, no matter
+              how small, helps us keep everything running and continue improving
+              Roséverse and Nintendo TVii for everyone.
+            </p>
+          </div>
+          <div class="support-content">
+            <div class="support-cards">
+              <div class="support-item">
+                <span class="support-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                </span>
+                <strong>Server hosting</strong>
+                <span>Keeping our services online 24/7</span>
+              </div>
+              <div class="support-item">
+                <span class="support-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </span>
+                <strong>Infrastructure</strong>
+                <span>Domains, databases, and CDN costs</span>
+              </div>
+              <div class="support-item">
+                <span class="support-item-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </span>
+                <strong>Development</strong>
+                <span>Tools, testing, and new features</span>
+              </div>
+            </div>
+            <div class="support-cta">
+              <a
+                href="https://www.patreon.com/cw/ProjectRoseWiiU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="wii-u-button"
+                role="button"
+              >
+                <span class="button-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  Support us on Patreon
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+      <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="/img/logo.webp" alt="Project Rosé" width="220" height="38" />
+          <p class="footer-desc">
+            Project Rosé is a revival project for Nintendo TVii and Miiverse!
+            Soon-to-be open source!
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h3>Navigate</h3>
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+          </div>
+          <div class="footer-col">
+            <h3>Community</h3>
+            <a href="https://discord.gg/AaTsXndGun" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="https://github.com/project-rose/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://projectrose.montastic.io/" target="_blank" rel="noopener noreferrer">Status</a>
+            <a href="https://www.youtube.com/@projectrosecafe" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://x.com/projectrosecafe" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Project Rosé, 2026. All rights reserved.</p>
+        <p class="footer-notice">
+          Not affiliated with Nintendo. All trademarks belong to their
+          respective owners.
+        </p>
+        <p class="footer-credit">Website by Dorian!</p>
+      </div>
+    </footer>
+
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+  </body>
+</html>

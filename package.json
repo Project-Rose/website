@@ -1,0 +1,8 @@
+{
+    "name": "rose-site",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "npx http-server . -p 4321 -c-1"
+    }
+}
