@@ -20,7 +20,7 @@
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' https://mii-unsecure.ariankordi.net https://cdn.projectrose.cafe; font-src 'self'; connect-src 'self' https://va.vercel-analytics.com https://us.i.posthog.com; frame-src 'self' https://vercel.live/; object-src 'self'; media-src 'self'; worker-src 'self'"
+                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://mii-unsecure.ariankordi.net https://cdn.projectrose.cafe; font-src 'self'; connect-src 'self' https://us.i.posthog.com; frame-src 'self'; object-src 'self'; media-src 'self'; worker-src 'self'"
                 },
                 {
                     "key": "Cross-Origin-Opener-Policy",

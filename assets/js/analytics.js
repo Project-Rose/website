@@ -51,17 +51,3 @@ if (location.hostname === "projectrose.cafe") {
       person_profiles: "always",
     });
 }
-
-// Vercel Analytics
-window.va =
-  window.va ||
-  function () {
-    (window.vaq = window.vaq || []).push(arguments);
-  };
-
-// Vercel Speed Insights
-window.si =
-  window.si ||
-  function () {
-    (window.siq = window.siq || []).push(arguments);
-  };
