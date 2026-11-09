@@ -1,0 +1,6 @@
+{
+        "directoryListing": false,
+        "redirects": [
+                {"source": "/.git/**", "destination": "/"}
+        ]
+}
